@@ -1,7 +1,13 @@
-import React from "react";
+import React from 'react';
+import Machine from '@craftybones/assembly_simulator';
+import Editor from './components/Editor';
 
-function App() {
-  return <div>hello world</div>;
-}
+const App = () => {
+  return (
+    <div>
+      <Editor machine={new Machine()} />
+    </div>
+  );
+};
 
 export default App;
