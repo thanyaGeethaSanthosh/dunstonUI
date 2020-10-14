@@ -3,11 +3,7 @@ import Machine from '@craftybones/assembly_simulator';
 import Editor from './components/Editor';
 
 const App = () => {
-  return (
-    <div>
-      <Editor machine={new Machine()} />
-    </div>
-  );
+  return <Editor machine={new Machine()} />;
 };
 
 export default App;
