@@ -43,21 +43,20 @@ const Editor = ({ machine }) => {
     setTable(machine.getTable());
   };
 
-  const onRun = (code) => {
+  const onRun = async (code) => {
     machine.load(code);
-    machine.execute();
+    await machine.execute();
     updateAll();
   };
 
-  const onStepInto = (code) => {
+  const onStepInto = async (code) => {
     machine.load(code);
-    machine.executeStepWise((e) => {
-      updateAll();
-    });
+    await machine.executeStepWise((e) => {});
+    updateAll();
   };
 
-  const onNext = () => {
-    machine.nextStep();
+  const onNext = async () => {
+    await machine.nextStep();
     updateAll();
   };
 

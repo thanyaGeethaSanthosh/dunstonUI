@@ -47,8 +47,8 @@ const TextEditor = (props) => {
         <Button
           disabled={stepInToDisable}
           onClick={() => {
-            setStepInToDisable(!stepInToDisable);
-            setnextDisable(!nextDisable);
+            setStepInToDisable(true);
+            setnextDisable(false);
             onStepInto(code);
           }}
           value="Step into"

@@ -25,6 +25,8 @@ const StyledRegisterTitle = styled.div`
 
 const RegisterTable = (props) => {
   const registerList = [
+    ' CL',
+    ' NL',
     'A',
     ' B',
     ' C',
@@ -33,8 +35,6 @@ const RegisterTable = (props) => {
     ' NE',
     ' GT',
     ' LT',
-    ' CL',
-    ' NL',
   ];
   const titles = registerList.map((tit, ind) => (
     <StyledRegisterTitle count={registerList.length} key={ind}>
