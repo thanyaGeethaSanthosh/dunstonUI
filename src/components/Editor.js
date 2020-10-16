@@ -51,7 +51,7 @@ const Editor = ({ machine }) => {
 
   const onStepInto = async (code) => {
     machine.load(code);
-    await machine.executeStepWise((e) => {});
+    await machine.executeStepWise(() => {});
     updateAll();
   };
 
