@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Button from './Button';
+import { Button, SaveButton } from './Button';
 
 const StyledTextEditor = styled.div`
   height: 60%;
@@ -55,6 +55,7 @@ const TextEditor = (props) => {
         />
         <Button onClick={() => onRun(code)} value="Run" />
         <Button disabled={nextDisable} onClick={onNext} value="Next" />
+        <SaveButton code={code} />
       </StyledButtons>
     </StyledTextEditor>
   );
